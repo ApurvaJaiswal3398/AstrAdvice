@@ -2,7 +2,7 @@
 
 {% block css %}
 <style>
-    .single-card-tab {
+    .single-card-tab{
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -17,9 +17,7 @@
 <div class="container-md">
     {% if message %}
     <div class="row" style="margin: 50px 70px -30px;">
-        <div class="col-sm-12 alert alert-{{ alert }}" role="alert">
-            {{ message }}
-        </div>
+        <div class="col-sm-12 alert alert-{{ alert }}" role="alert">{{ message }}</div>
     </div>       
     {% endif %}
     <div class="row row-col-2" style="margin: 50px;">
@@ -28,7 +26,9 @@
                 <div class="card-body bg-dark text-light single-card-tab rounded" style="padding: 50px 100px; height: 65vh;">
                     <form method="POST" class="text-center">
                         <div class="h3 mb-3 font-weight-normal text-center">Already Registered? </div><hr>
-                        <a href="/login"><button type="button" class="btn btn-danger col-sm-6 text-center rounded-pill">Login Now</button></a>
+                        <a href="/login">
+                            <button type="button" class="btn btn-danger col-sm-6 text-center rounded-pill">Login Now</button>
+                        </a>
                     </form>
                 </div>
             </div>
@@ -38,15 +38,6 @@
                 <div class="card-body text-dark single-card-tab rounded" style="padding: 50px 100px; height: 120vh; background-color: #ddd;">
                     <form method="post">
                         <div class="h3 mb-3 font-weight-normal text-center">Register</div><hr>
-                        <!-- <div class="btn-group" data-toggle="buttons" style="float: right;">
-                            <label class="btn btn-success">
-                                <input type="radio" name="isadmin" id="isadmin" autocomplete="off" onchange="chooseaccess()" value="Admin" {% if ma==False %} disabled {% else %} required {% endif %}>Admin
-                            </label>
-                            <label class="btn btn-success active">
-                                <input type="radio" name="isadmin" id="isuser" autocomplete="off" onchange="chooseaccess()" value="User" required>User
-                            </label>
-                            <input type="text" class="form-control" id="access" name="access" style="width: 200px; height: 40%;">
-                        </div><br><br> -->
                         <div class="form-group">
                             <label for="firstname">First Name</label>
                             <input type="text" class="form-control tbwidth" name="firstname" id="firstname" placeholder="Enter First Name" onblur="checkfname()" required>
@@ -55,10 +46,6 @@
                             <label for="lastname">Last Name</label>
                             <input type="text" class="form-control tbwidth" name="lastname" id="lastname" placeholder="Enter Last Name" onblur="checklname()" required>
                         </div>
-                        <!-- <div class="form-group">
-                            <label for="register_username">Username</label>
-                            <input type="text" class="form-control tbwidth" name="register_username" id="register_username" placeholder="Enter Username" onblur="checkuname()" required>
-                        </div> -->
                         <div class="form-group">
                             <label for="mobile">Mobile</label>
                             <input type="text" class="form-control tbwidth" name="mobile" id="mobile" placeholder="Enter Mobile Number" onblur="checkmobile()" required>
@@ -86,17 +73,7 @@
 
 {% block js %}
 <script type="text/javascript">
-    // function chooseaccess()
-    // {
-    //     var a=document.getElementById('isadmin');
-    //     var u=document.getElementById('isuser');
-    //     var t=document.getElementById('access');
-    //     if(a.checked === true)
-    //         t.value = a.value;
-    //     else if(u.checked === true)
-    //         t.value = u.value;
-    //     alert(t.value);
-    // }
+    
     function checkfname()
     {
         var regex=/^[a-zA-Z]+$/
@@ -111,6 +88,7 @@
         }
         document.body.focus();
     }
+    
     function checklname()
     {
         var regex=/^[a-zA-Z]+$/
@@ -125,20 +103,7 @@
         }
         document.body.focus();
     }
-    // function checkuname()
-    // {
-    //     var regex=/^[a-zA-Z0-9]+$/
-    //     var uname=document.getElementById('register_username').value;
-    //     if(uname!="")
-    //     {
-    //         if(!regex.test(uname))
-    //         {
-    //             document.getElementById('register_username').style.border="thin solid red";
-    //             document.getElementById('register_username').value="";
-    //         }
-    //     }
-    //     document.body.focus();
-    // }
+    
     function checkmobile()
     {
         var regex=/^[6-9][0-9]{9}$/
@@ -155,6 +120,7 @@
         }
         document.body.focus();
     }
+    
     function checkemail()
     {
         var regex=/^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i ;
@@ -169,6 +135,7 @@
         }
         document.body.focus();
     }
+    
     function checkpassword()
     {
         var regex=/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*]).{8,}$/i ;
@@ -183,6 +150,7 @@
         }
         document.body.focus();
     }
+    
     function confirmpassword()
     {
         var pass=document.getElementById('register_password').value;

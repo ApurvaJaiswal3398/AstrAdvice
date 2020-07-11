@@ -17,9 +17,7 @@
 <div class="container-md">
     {% if message %}
     <div class="row" style="margin: 50px 70px -30px;">
-        <div class="col-sm-12 alert alert-{{ alert }}" role="alert">
-            {{ message }}
-        </div>
+        <div class="col-sm-12 alert alert-{{ alert }}" role="alert">{{ message }}</div>
     </div>       
     {% endif %}
     <div class="row  row-col-2" style="margin: 50px;">
@@ -35,7 +33,6 @@
                         <div class="form-group">
                             <label for="login_password">Password</label>
                             <input type="password" class="form-control" name="login_password" id="login_password" placeholder="Enter Password" onblur="checkpassword()" required>
-                            <!-- <span class="form-text"><a id='frgt' href='/forgotpassword'>Forgot Password</a></span> -->
                         </div>
                         <button class="btn btn-danger col-sm-6 rounded-pill">Sign In</button>
                     </form>
@@ -47,7 +44,9 @@
                 <div class="card-body text-dark single-card-tab rounded" style="padding: 50px 100px; background-color: #ddd;">
                     <form class="text-center">
                         <div id="get" class="h3 mb-3 font-weight-normal text-center">Not Registered Yet? </div><hr>
-                        <a href="/register"><button type="button" class="btn btn-success col-sm-6 text-center rounded-pill">Register Now</button></a>
+                        <a href="/register">
+                            <button type="button" class="btn btn-success col-sm-6 text-center rounded-pill">Register Now</button>
+                        </a>
                     </form>
                 </div>
             </div>
@@ -74,6 +73,7 @@
         }
         document.body.focus();
     }
+
     function checkpassword()
     {
         var regex=/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*]).{8,}$/i ;

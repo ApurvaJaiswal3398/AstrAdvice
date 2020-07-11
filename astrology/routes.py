@@ -12,6 +12,7 @@ def home():
 def signhoroscope(sign):
     x = Dh.find_one({'_id':sign})
     imgpath = None
+    
     if x:
             # If Zodiac Sign Present in the Database
         imgpath = '../static/images/' + x['_id'].lower() + '.png'
@@ -29,6 +30,7 @@ def annualhoroscope():
 
 def check_data(email):
     ''' Function to check the existence of a user detail containing the given email, and return the user details if present '''
+    
     query = {"email": email}
     x = Users.find_one(query)
     return x
@@ -39,12 +41,14 @@ def login():
     alert = 'danger'
     global logged_in
     global logged_in_detail
+    
     if request.method == "POST":
             # Extracting Data from Login form
         login_email = request.form.get('login_email')
         login_password = request.form.get('login_password')
         detail = check_data(login_email)    # Checking for the existence of the email in the database
         logged_in_detail = detail
+        
         if detail:
                 # Checking if the User Detail present for the enterd Email
             if crypt.check_password_hash(detail["password"], login_password):
@@ -67,11 +71,13 @@ def logout():
 
 def save_data(fname, lname, mobile, email, password):
     ''' Function to Save the given user details in the Database '''
+    
     value = {"first_name":fname, "last_name":lname, "mobile":mobile, "email":email, "password":password}
     x = Users.insert_one(value)    # Inserting the given User Details in the database
 
 def is_present(key,value):
     ''' Function to check the key value pair in the Database '''
+    
     query = {key:value}     # Setting criteria for searhing a given key value pair
     x = Users.find_one(query)       # Checking for the presence of the key value pair
     if x:
@@ -84,6 +90,7 @@ def register():
     message=None
     global logged_in
     alert = "danger"
+    
     if request.method == 'POST':
             # Extracting Data from the Register form
         reg_fname = request.form.get('firstname')
@@ -103,6 +110,7 @@ def register():
             hashed_password = crypt.generate_password_hash(reg_password).decode('utf-8')    # Encrypting Password
             save_data(reg_fname, reg_lname, reg_mobile, reg_email, hashed_password)
                 # Saving the new user details, including encrypted password, in the database
+            
             message = 'You Have Been Registered. You May Login!'
             alert = "success"
     return render_template('register.html', title='Register', logged_in=logged_in, message=message, alert=alert)
