@@ -1,0 +1,59 @@
+.fa-phone:before{
+    content:"\f095";
+}
+.float-right{
+    float:right;
+}
+.margin-5px{
+    margin:5px;
+}
+.page-wrapper{
+    width:100%;
+    background:#fff;
+    padding:10px 15px
+}
+.text-left{
+    text-align:left
+}
+.text-right{
+    text-align:right
+}
+.text-center{
+    text-align:center
+}
+.text-justify{
+    text-align:justify
+}
+.text-nowrap{
+    white-space:nowrap
+}
+.text-lowercase{
+    text-transform:lowercase
+}
+.text-uppercase{
+    text-transform:uppercase
+}
+.text-capitalize{
+    text-transform:capitalize
+}
+.text-muted{
+    color:#777
+}
+.text-primary{
+    color:#337ab7
+}
+section.bgeaeaea{
+    background:#eaeaea
+}
+.padding-b-80{
+    padding:0 0 80px
+}
+.padding-t-80{
+    padding:19px 0 0
+}
+.padding-tb-80{
+    padding:80px 0
+}
+.paddig-top-20{
+    padding-top:20px
+}

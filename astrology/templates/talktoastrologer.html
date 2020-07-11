@@ -1,0 +1,259 @@
+{% extends 'layout.html' %}
+
+{% block css %}
+<style>
+    .icon img{
+        height:35px;
+        width:auto;
+    }
+    .icon{
+        width:60px;
+        height:60px;
+        border-radius:50%;
+        background: #921f42;
+        padding:10px;
+        margin:-38px auto 10px;
+        box-shadow:0 1px 3px #044434;
+        text-align:center
+    }
+    .icon-bg{
+        width:130px;
+        height:130px;
+        border-radius:50%;
+        background: #e7bf51;
+        padding:10px;
+        margin: auto auto 20px;
+        box-shadow:0 1px 3px #044434;
+        text-align:center
+    }
+    .icon-bg>img{
+        height: auto;
+        width: 100%;
+    }
+    .sign-tile{
+        margin:20px auto;
+        background:#fff;
+        border:1px solid #ccc;
+        padding:10px;
+        background-color:#eaeaea;
+        border-radius:5px;
+        border-bottom:5px solid #e5e5e5;
+        cursor:pointer;
+        font-weight: bold;
+    }
+    .sign-tile:hover{
+        background-color:#6acabd;
+        border-radius:5px 5px 10px 10px;
+        box-shadow:0 14px 28px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.22);
+        transition:all .6s;
+        border-bottom:5px solid #333;
+        color: yellow;
+        text-decoration: none;
+    }
+    .hoverbg:hover{
+        background-color: rgb(215, 230, 164);
+    }
+    .sign-tile-holder{
+        margin: 30px;
+        padding: 5px;
+    }
+    .sign-name{
+        font-size: 25px;
+        font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif';
+        color: black !important;
+        text-decoration: none !important;
+    }
+    .sign-date{
+        font-size: small;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        color: black !important;
+        margin-top: -15px;
+        margin-bottom: 35px;
+    }
+    .padding-top-20{
+        padding-top:20px
+    }
+    .margin-tb-10{
+        margin: 10px auto;
+        height: 33vh;
+        padding: 10px;
+    }
+    .margin-top-50{
+        margin: 50px 20px;
+    }
+    .row .col{
+        margin: 5px 20px;
+        width: 80%;
+    }
+    #dailyhoro{
+        width: 90%;
+        margin: auto;
+    }
+    .section-headings h1 {
+        margin: 22px 0 0;
+        text-transform: uppercase;
+        font-size: 30px;
+        font-weight: 800;
+        position: relative;
+        color: #380101;
+    }
+    .noborder{
+        border: none;
+    }
+    .biggertext{
+        font-size:25px;
+    }
+    .smallertext{
+        font-size: 95%;
+        padding: 5px;
+    }
+    .width80{
+        width: 80%;
+        margin: auto;
+    }
+    .width95{
+        width: 95%;
+        margin: auto;
+    }
+    .tile-image{
+        margin-bottom: 20px;
+    }
+    .tile-image>a>img{
+        width: 100%;
+        height: auto;
+    }
+    .tile-heading{
+        margin: 25px;
+    }
+    .tile-para{
+        text-align: justify;
+    }
+    .box-shadow{
+        box-shadow: 0 4px 8px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.22);
+        padding: 15px;
+        column-gap: 15px;
+    }
+    .sign-tile>a>p{
+        text-decoration: none;
+        width: 95%;
+    }
+    .astroname{
+        font-size: 19px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: #000 !important;
+    }
+    .astrolang{
+        font-size: 14px;
+        color: #555 !important;
+        margin: 1px;
+    }
+    .astrofield{
+        font-size: smaller;
+        margin: 8px auto;
+    }
+    .padding10{
+        padding: 10px;
+    }
+    .footer-tile{
+        padding:20px 0;
+    }
+    .footer-tile li{
+        list-style:none
+    }
+    .footer-tile a{
+        color:#000
+    }
+    .footer-tile li a{
+        color:#000;
+        text-decoration:none;
+        font-weight:500;
+        font-size:13px
+    }
+    .footer-tile li a:hover{
+        color:#af2121
+    }
+    .footer-tile li{
+        padding:5px
+    }
+    .footer-tile ul{
+        padding-left:0
+    }
+    .footer-tile p{
+        color:#000000f2;
+        font-size:13px;
+        line-height:20px;
+        text-align:justify
+    }
+    .footer-tile h3{
+        color:#000;
+        margin:0;
+        padding:0 0 20px
+    }
+    .size-half{
+        width: 7%;
+        height: auto;
+    }
+    .astrotiles{
+        padding: auto 20px;
+        width: 85%;
+        margin: auto;
+    }
+    .astroimg{
+        width: 100%;
+        height: auto;
+    }
+    .astrodetails{
+        padding-left: 5px;
+    }
+    .toupper{
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    .heightem{
+        height: 12.5em;
+    }
+    .pad10{
+        padding: 10px;
+        text-align: center;
+    }
+</style>
+{% endblock %}
+
+{% block body %}
+<section>
+    <div class="row text-center sign-tile-holder">
+        <div class="col-md-12">
+            <div class="section-headings aboutus">
+                <h1>TALK TO ASTROLOGER</h1>
+                <h4>500+ Best Astrologers from India for Consultation</h4>
+            </div>
+        </div>
+    </div>
+    <div class="row astrotiles">
+        {% for i in astrcrsr.find({}) %}
+        <div class="col-md-4">
+            <div class="card card-body box-shadow margin-tb-10">
+                <div class="row">
+                    <div class="col-md-5 text-center">
+                        <img class="astroimg border rounded-circle" src="{{ i['image_file'] }}" alt="{{ i['full_name'] }}"><br>
+                        <img src="../static/images/feather/users.svg" alt="Customers" style="width: 12%; height: auto;"> &nbsp;<span style="font-weight: bold; font-size: 12px;">{{ i['customers'] }}</span><br>
+                        {% if logged_in %}
+                        <a name="callbutton" id="call{{ i['_id'] }}" class="btn badge-pill btn-outline-success" href="tel:+91{{ i['mobile'] }}" role="button" style="width: 65px; margin: 5px;">Call</a>
+                        {% else %}
+                        <a name="callbutton" id="call{{ i['_id'] }}" class="btn badge-pill btn-outline-success" href="/login" role="button" style="width: 65px; margin: 5px;" onclick="alert('Login to Access This Feature');">Call</a>
+                        {% endif %}
+                    </div>
+                    <div class="col-md-7">
+                        <h4 class="astroname">{{ i['astroname'] }}</h4>
+                        <h5 class="toupper smallertext">{{ i['field'] }}</h5>
+                        <p class="astrofield astrodetails"><span class="astrolang">{{ i['language'] }}</span><br>Exp: {{ i['experience'] }} Years<br><b>&#8377; {{ i['charges'] }}/minute</b></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+<hr width="90%" size="2px" color="#999">
+<div class="card-footer noborder bg-dark text-white padding10 text-center smallertext">Copyright &COPY; 2020 Apurva Jaiswal Software Aid Pvt. Ltd. All Rights Reserved</div>
+{% endblock %}

@@ -1,0 +1,461 @@
+{% extends 'layout.html' %}
+
+{% block css %}
+<style>
+    .icon img{
+        height:35px;
+        width:auto;
+    }
+    .icon{
+        width:60px;
+        height:60px;
+        border-radius:50%;
+        background: #921f42;
+        padding:10px;
+        margin:-38px auto 10px;
+        box-shadow:0 1px 3px #044434;
+        text-align:center
+    }
+    .icon-bg{
+        width:130px;
+        height:130px;
+        border-radius:50%;
+        background: #e7bf51;
+        padding:10px;
+        margin: auto auto 20px;
+        box-shadow:0 1px 3px #044434;
+        text-align:center
+    }
+    .icon-bg>img{
+        height: auto;
+        width: 100%;
+    }
+    .sign-tile{
+        margin:20px auto;
+        background:#fff;
+        border:1px solid #ccc;
+        padding:10px;
+        background-color:#eaeaea;
+        border-radius:5px;
+        border-bottom:5px solid #e5e5e5;
+        cursor:pointer;
+        font-weight: bold;
+    }
+    .sign-tile:hover{
+        background-color:#6acabd;
+        border-radius:5px 5px 10px 10px;
+        box-shadow:0 14px 28px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.22);
+        transition:all .6s;
+        border-bottom:5px solid #333;
+        color: rgb(253, 253, 129);
+        text-decoration: none;
+    }
+    .hoverbg:hover{
+        background-color: rgb(215, 230, 164);
+    }
+    .sign-tile-holder{
+        margin: 30px;
+        padding: 5px;
+    }
+    .sign-name{
+        font-size: 25px;
+        font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif';
+        color: black !important;
+        text-decoration: none !important;
+    }
+    .sign-date{
+        font-size: small;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        color: black !important;
+        margin-top: -15px;
+        margin-bottom: 35px;
+    }
+    .padding-top-20{
+        padding-top:20px
+    }
+    .margin-top-50{
+        margin: 50px 20px;
+    }
+    .row .col{
+        margin: 5px 20px;
+        width: 80%;
+    }
+    #dailyhoro{
+        width: 90%;
+        margin: auto;
+    }
+    .section-headings h1 {
+        margin: 22px 0 0;
+        text-transform: uppercase;
+        font-size: 30px;
+        font-weight: 800;
+        position: relative;
+        color: #380101;
+    }
+    .noborder{
+        border: none;
+    }
+    .biggertext{
+        font-size:25px;
+    }
+    .smallertext{
+        font-size: 95%;
+        padding: 5px;
+    }
+    .width80{
+        width: 80%;
+        margin: auto;
+    }
+    .width95{
+        width: 95%;
+        margin: auto;
+    }
+    .tile-image{
+        margin-bottom: 20px;
+    }
+    .tile-image>a>img{
+        width: 100%;
+        height: auto;
+    }
+    .tile-heading{
+        margin: 25px;
+    }
+    .tile-para{
+        text-align: justify;
+    }
+    .box-shadow{
+        box-shadow: 0 4px 8px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.22);
+        padding: 15px;
+        column-gap: 15px;
+    }
+    .sign-tile>a>p{
+        text-decoration: none;
+        width: 95%;
+    }
+    .astroname{
+        font-size: 20px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: #000 !important;
+    }
+    .astrolang{
+        font-size: 12.5px;
+        color: #555 !important;
+    }
+    .astrofield{
+        font-size: smaller;
+    }
+    .padding10{
+        padding: 10px;
+    }
+    .footer-tile{
+        padding:20px 0;
+    }
+    .footer-tile li{
+        list-style:none
+    }
+    .footer-tile a{
+        color:#000
+    }
+    .footer-tile li a{
+        color:#000;
+        text-decoration:none;
+        font-weight:500;
+        font-size:13px
+    }
+    .footer-tile li a:hover{
+        color:#af2121
+    }
+    .footer-tile li{
+        padding:5px
+    }
+    .footer-tile ul{
+        padding-left:0
+    }
+    .footer-tile p{
+        color:#000000f2;
+        font-size:13px;
+        line-height:20px;
+        text-align:justify
+    }
+    .footer-tile h3{
+        color:#000;
+        margin:0;
+        padding:0 0 20px
+    }
+    .size-half{
+        width: 7%;
+        height: auto;
+    }
+</style>
+{% endblock %}
+
+{% block body %}
+<section class="text-center" id="dailyhoro">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="section-headings aboutus">
+                <h1>DAILY HOROSCOPE</h1>
+                <h4>Your daily zodiac sign reading free</h4>
+            </div>
+        </div>
+    </div>
+    <div class="row sign-tile-holder">
+        <div class="col-2">
+            <div class="sign-tile">
+                <a href="/freehoroscope/Aries">
+                    <div class="icon bg-aries">
+                        <img src="../static/images/aries.png" alt="aries">
+                    </div>
+                    <p class="sign-name">Aries</p>
+                    <p class="sign-date">Mar 21 - Apr 19</p>
+                </a>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="sign-tile">
+                <a href="/freehoroscope/Taurus">
+                    <div class="icon bg-taurus">
+                        <img src="../static/images/taurus.png" alt="taurus">
+                    </div>
+                    <p class="sign-name">Taurus</p>
+                    <p class="sign-date">Apr 20 - May 20</p>
+                </a>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="sign-tile">
+                <a href="/freehoroscope/Gemini">
+                    <div class="icon bg-gemini">
+                        <img src="../static/images/gemini.png" alt="gemini">
+                    </div>
+                    <p class="sign-name">Gemini</p>
+                    <p class="sign-date">May 21 - Jun 20</p>
+                </a>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="sign-tile">
+                <a href="/freehoroscope/Cancer">
+                    <div class="icon bg-cancer">
+                        <img src="../static/images/cancer.png" alt="cancer">
+                    </div>
+                    <p class="sign-name">Cancer</p>
+                    <p class="sign-date">Jun 21 - Jul 22</p>
+                </a>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="sign-tile">
+                <a href="/freehoroscope/Leo">
+                    <div class="icon bg-leo">
+                        <img src="../static/images/leo.png" alt="leo">
+                    </div>
+                    <p class="sign-name">Leo</p>
+                    <p class="sign-date">Jul 23 - Aug 22</p>
+                </a>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="sign-tile">
+                <a href="/freehoroscope/Virgo">
+                    <div class="icon bg-virgo">
+                        <img src="../static/images/virgo.png"alt="virgo">
+                    </div>
+                    <p class="sign-name" >Virgo</p>
+                    <p class="sign-date">Aug 23 - Sep 22</p>
+                </a>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="sign-tile">
+                <a href="/freehoroscope/Libra">
+                    <div class="icon bg-libra">
+                        <img src="../static/images/libra.png" alt="libra">
+                    </div>
+                    <p class="sign-name">Libra</p>
+                    <p class="sign-date">Sep 23 - Oct 22</p>
+                </a>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="sign-tile">
+                <a href="/freehoroscope/Scorpio">
+                    <div class="icon bg-scorpio">
+                        <img src="../static/images/scorpio.png" alt="scorpio">
+                    </div>
+                    <p class="sign-name">Scorpio</p>
+                    <p class="sign-date">Oct 23 - Nov 21</p>
+                </a>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="sign-tile">
+                <a href="/freehoroscope/Sagittarius">
+                    <div class="icon bg-sagittarius">
+                        <img src="../static/images/sagittarius.png" alt="sagittarius">
+                    </div>
+                    <p class="sign-name">Sagittarius</p>
+                    <p class="sign-date">Nov 22 - Dec 21</p>
+                </a>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="sign-tile">
+                <a href="/freehoroscope/Capricorn">
+                    <div class="icon bg-capricorn">
+                        <img src="../static/images/capricorn.png" alt="capricorn">
+                    </div>
+                    <p class="sign-name">Capricorn</p>
+                    <p class="sign-date">Dec 22 - Jan 19</p>
+                </a>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="sign-tile">
+                <a href="/freehoroscope/Aquarius">
+                    <div class="icon bg-aquarius">
+                        <img src="../static/images/aquarius.png" alt="aquarius">
+                    </div>
+                    <p class="sign-name">Aquarius </p>
+                    <p class="sign-date">Jan 20 - Feb 18 </p>
+                </a>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="sign-tile">
+                <a href="/freehoroscope/Pisces">
+                    <div class="icon bg-pisces">
+                        <img src="../static/images/pisces.png" alt="pisces">
+                    </div>
+                    <p class="sign-name">Pisces</p>
+                    <p class="sign-date">Feb 19 - Mar 20</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<hr width="90%" size="2px" color="#999">
+<section>
+    <div class="card noborder">
+        <div class="card-header text-center">
+            <div class="row width80">
+                <div class="col-md-12">
+                    <div class="section-headings aboutus">
+                        <h1>ABOUT US</h1>
+                        <h4 class="smallertext">20M+ satisfied customers, 500+ astrologers and lots of love</h4>
+                        <p class="smallertext text-secondary">We have the World Famous Astrologers on the Best Astrology Website in India, practising both Indian Astrology and Western Astrology for astrology today. They will provide the best free horoscope astrology to you by analysing your birth chart and your astrology sign and will provide you with accurate future predictions online.</p>
+                    </div>
+                </div>
+            </div>        
+        </div>
+        <div class="card-body width80 text-center">
+            <div class="row">
+                <div class="col-4 box-shadow">
+                    <div class="tile-image">
+                        <a href="https://www.linkedin.com/in/apurva-jaiswal-07b752197/" target="_blank">
+                            <img src="../static/images/SHIELD.png">
+                        </a>
+                    </div>
+                    <div class="text-center width95">
+                        <h3 class="tile-heading">OUR FOUNDER</h3>
+                        <p class="tile-para">Apurva Jaiswal, our Founder, is a young student, purusing Graduation. After learning many languages, he started learning Python, and worked on many projects, including IOT. He founded AstrAdvice in 2020. He wants to enrich the lives of people with genuine counselling, powered by technology.</p>
+                    </div>
+                </div>
+                <div class="col-4 box-shadow">
+                    <div class="tile-image">
+                        <a><img src="../static/images/event.jpg"></a>
+                    </div>
+                    <div class="text-center width95">
+                        <h3 class="tile-heading">OUR STORY</h3>
+                        <p class="tile-para">Acknowledging the accuracy of predictions from an Astrologer, we were born to provide easy access to genuine experts around the world. We are trying to disrupt this industry with the use of technology and excellent customer service, in order to help customers find the right Astrologer.</p>
+                    </div>
+                </div>
+                <div class="col-4 box-shadow">
+                    <div class="tile-image">
+                        <a><img src="../static/images/purpose.jpg"></a>
+                    </div>
+                    <div class="text-center width95">
+                        <h3 class="tile-heading">OUR PURPOSE</h3>
+                        <p class="tile-para">At AstrAdvice, our purpose is to make Astrology, the ancient occult science from India, available across the Globe by a click of a button. With genuine Astrologers & 24*7 customer support, we provide the best future predictions to counsel people during their difficult phase of life.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer noborder"></div>
+    </div>
+</section>
+<hr width="90%" size="2px" color="#999">
+<section class="text-center">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="section-headings aboutus">
+                <h1>OUR ASTROLOGERS</h1>
+                <h4>500+ Best Astrologers from India for Online Consultation</h4>
+            </div>
+        </div>
+    </div>
+    <div class="row sign-tile-holder">
+        {% for i in ast.find({}).limit(12) %}
+        <div class="col-3">
+            <div class="sign-tile hoverbg">
+                <div class="icon-bg">
+                    <img src="{{ i['image_file'] }}" alt="{{ i['full_name'] }}">
+                </div>
+                <p class="astroname">{{ i['astroname'] }}</p>
+                <p class="astrolang">{{ i['language'] }}</p>
+                <p class="astrofield text-secondary">{{ i['field'][:32] }}...</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+<hr width="90%" size="2px" color="#999">
+<section>
+    <div class="card noborder">
+        <div class="card-header">
+            <div class="row width95">
+                <div class="col-3">
+                    <div class="text-center width95 padding10">
+                        <h4 class="tile-heading">About AstAdvice</h4>
+                        <p class="tile-para smallertext">AstrAdvice is the best astrology website for online Astrology predictions. Talk to Astrologer on call and get answers to all your worries by seeing the future life through Astrology Kundli Predictions from the best Astrologers from India. Get best future predictions related to Marriage, love life, Career or Health over call, chat, query or report.</p>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="footer-tile biggertext margin-top-50">
+                        <ul>
+                            <li><a href="#" title="Chinese Horoscope 2020"> Chinese Horoscope 2020</a></li>
+                            <li><a href="#" title="About Us">About Us </a></li>
+                            <li><a href="#" title="Refund & Cancellation">Refund & Cancellation Policy </a></li>
+                            <li><a href="#" title="Disclaimer">Disclaimer  </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="footer-tile biggertext margin-top-50">
+                        <ul>
+                            <li><a href="#">Horoscope </a></li>
+                            <li><a href="#" title="Terms & conditions">Terms & Conditions </a></li>
+                            <li><a href="#" title="Privacy policy">Privacy Policy </a></li>
+                            <li><a href="#" title="Pricing policy">Pricing Policy </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="footer-tile">
+                        <h3>Contact Us </h3>
+                        <div class="biggertext">
+                            <li><a href="tel:+919318986961"target="_top" title="Contact us"><img src="../static/images/feather/phone.svg" alt="Call Us" class="size-half">&nbsp; Call</a></li>
+                            <li><a target="_blank" href="https://www.facebook.com/apurva.jaiswal.96/" title="Facebook"><img src="../static/images/feather/facebook.svg" alt="Facebook" class="size-half">&nbsp; Facebook</a></li>
+                            <li><a target="_blank" href="https://www.instagram.com/naroatzia/" title="Instagram"><img src="../static/images/feather/instagram.svg" alt="Instagram" class="size-half">&nbsp; Instagram</a></li>
+                            <li><a target="_blank" href="https://www.linkedin.com/in/apurva-jaiswal-07b752197/" title="Linked In"><img src="../static/images/feather/linkedin.svg" alt="Linked In" class="size-half">&nbsp; Linked In</a></li>
+                            <li><a target="_blank" href="https://twitter.com/APURVAJAISWAL98/" title="Twitter"><img src="../static/images/feather/twitter.svg" alt="Twitter" class="size-half">&nbsp; Twitter</a></li>
+                            <li><a target="_blank" href="https://www.youtube.com/channel/UCHp_JXWuVVH5iVnSBufVw8g" title="YouTube Channel"><img src="../static/images/feather/youtube.svg" alt="YouTube" class="size-half">&nbsp; YouTube</a></li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer noborder bg-dark text-white padding10 text-center smallertext">Copyright &COPY; 2020 Apurva Jaiswal Software Aid Pvt. Ltd. All Rights Reserved</div>
+    </div>
+</section>
+{% endblock %}

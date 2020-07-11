@@ -1,0 +1,288 @@
+{% extends 'layout.html' %}
+
+{% block css %}
+<style>
+    .icon img{
+        height:35px;
+        width:auto;
+    }
+    .icon{
+        width:60px;
+        height:60px;
+        border-radius:50%;
+        background: #92531f;
+        padding:10px;
+        margin:-38px auto 10px;
+        box-shadow:0 1px 3px #044434;
+        text-align:center
+    }
+    #imgtile{
+        width:60px;
+        height:60px;
+        background: #7b1f92;
+        padding:10px;
+        border-radius: 10%;
+    }
+    .sign-tile{
+        margin:20px auto;
+        background:#fff;
+        border:1px solid #ccc;
+        padding:10px;
+        background-color:#eaeaea;
+        border-radius:5px;
+        border-bottom:5px solid #e5e5e5;
+        cursor:pointer;
+        color:#000!important
+    }
+    .sign-tile:hover{
+        background-color: #6acabd;
+        border-radius:5px 5px 10px 10px;
+        box-shadow:0 14px 28px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.22);
+        transition:all .6s;
+        border-bottom:5px solid #333
+    }
+    .sign-tile-holder{
+        margin: 30px;
+        padding: 5px;
+    }
+    .padding-top-20{
+        padding-top:20px
+    }
+    .padding-10{
+        padding: 10;
+    }
+    .padding-20{
+        padding: 20px;
+    }
+    .row .col{
+        margin: 5px 20px;
+        width: 80%;
+    }
+    #dailyhoro{
+        width: 90%;
+        margin: auto;
+    }
+    .section-headings{
+        margin-top: 50px;
+    }
+    .section-headings h1 {
+        margin: 22px 0 0;
+        text-transform: uppercase;
+        font-size: 30px;
+        font-weight: 800;
+        position: relative;
+        color: #380101;
+    }
+    .margin-5per-rl{
+        margin: auto 5%;
+    }
+    .margin-2{
+        margin: 2px;
+        width: 50%;
+    }
+    .heading{
+        padding: 5px;
+    }
+    .content{
+        padding: 10px;
+    }
+    .text-sm{
+        font-size: 85%;
+    }
+    .noborder{
+        border: none;
+    }
+    .box-shadow{
+        box-shadow: 0 4px 8px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.22);
+        padding: 15px;
+        column-gap: 15px;
+    }
+    .horo-tile{
+        margin:20px auto;
+        background:#fff;
+        border:1px solid #ccc;
+        padding:10px;
+        border-radius:5px;
+        cursor:pointer;
+        color:#000!important;
+        font-size: smaller;
+        padding: 5%
+    }
+    .horo-tile:hover{
+        border-radius:5px 5px 10px 10px;
+        box-shadow:0 14px 28px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.22);
+        transition:all .6s;
+    }
+</style>
+{% endblock %}
+
+{% block body %}
+<section class="text-center" id="dailyhoro">
+    <img src="../static/images/bgimg.png" alt="2020 Horoscope" style="width: 100%;">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="section-headings aboutus">
+                <h1>YEARLY HOROSCOPE 2020</h1>
+                <h4>Choose your sun sign to read your daily horoscope</h4>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin: 40px 0;">
+        <div class="col-3 padding-10" style="padding-top: 20px;">
+            <div class="col-12">
+                <a href="/freehoroscope/Aries">
+                    <div class="sign-tile">
+                        <div class="icon bg-aries" id="mydiv">
+                            <img src="../static/images/aries.png" alt="aries">
+                        </div>
+                        <p>Aries</p>
+                        <p>Mar 21 - Apr 19</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12">
+                <a href="/freehoroscope/Taurus">
+                    <div class="sign-tile">
+                        <div class="icon bg-taurus">
+                            <img src="../static/images/taurus.png" alt="taurus">
+                        </div>
+                        <p>Taurus</p>
+                        <p>Apr 20 - May 20</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12">
+                <a href="/freehoroscope/Gemini">
+                    <div class="sign-tile">
+                        <div class="icon bg-gemini">
+                            <img src="../static/images/gemini.png" alt="gemini">
+                        </div>
+                        <p>Gemini</p>
+                        <p>May 21 - Jun 20</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12">
+                <a href="/freehoroscope/Cancer">
+                    <div class="sign-tile">
+                        <div class="icon bg-cancer">
+                            <img src="../static/images/cancer.png" alt="cancer">
+                        </div>
+                        <p>Cancer</p>
+                        <p>Jun 21 - Jul 22</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12">
+                <a href="/freehoroscope/Leo">
+                    <div class="sign-tile">
+                        <div class="icon bg-leo">
+                            <img src="../static/images/leo.png" alt="leo">
+                        </div>
+                        <p>Leo</p>
+                        <p>Jul 23 - Aug 22</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12">
+                <a href="/freehoroscope/Virgo">
+                    <div class="sign-tile">
+                        <div class="icon bg-virgo">
+                            <img src="../static/images/virgo.png"alt="virgo">
+                        </div>
+                        <p >Virgo</p>
+                        <p>Aug 23 - Sep 22</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="col-12">
+                <div class="horo-tile box-shadow text-justify">
+                    <p>Finally, we are about to enter 2020 and it is not less than a Dream. With the beginning of the new year, everyone will be hoping for new opportunities, fortune, luck to cross their way and fill their lives with bulk of happiness. A fresh start to a new year will be on the cards and everyone will try to start new innings of their life. Apart from the excitement to jump into the year, 2020 will be coming with a lot of questions to screw your mind. The questions related to your Career, Health, Relationship, Marriage and much more. However, a positive attitude and fresh thinking will help you get rid of all the hurdles and problems coming in your way.</p>
+                    <p>All 12 Zodiac signs will fire their way to go ahead of each other. The fire Zodiac signs (Aries, Leo, and Sagittarius) will get plenty of time to think about themselves and decide what is right for them. The earth Zodiac signs ( Taurus, Virgo and Capricorn) will get immense attention in 2020 while Air zodiac signs (Gemini, Libra and Aquarius) have to focus more on their progress. However, the water zodiac signs (Cancer, Scorpio and Pisces) are going to see a new light of success in the coming year. Overall 2020 is going to be a quiet neutral and pleasant year for all the Zodiac Signs.</p>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="horo-tile box-shadow text-justify">
+                    <p>We're curious to find out how our new year might look like. Whether we believe in astrology or not, we've found, but we always like to read our New Year's astrological signs and try to see how it can appear in the upcoming months.</p>
+                    <p>A yearly prediction is based on the planet Jupiter that will remain under the sign of Sagittarius until March 20, 2020, and then enter the sign of Capricorn. On May 14, 2020, it will go into the retrograde phase and will see Sagittarius sign in retrograde motion until Sept 13, 2020.</p>
+                    <p>Interestingly, on January 24, 2020, a planet of karmic connections, Saturn, will change its sign and continue to exist in Capricorn for the next 2.5 years. This is going to be the beginning of Sade-Sati (7.5 years) for Aquarius natives. After a long wait as their Sade-Sati ends, it will be a relief for Scorpion natives.</p>
+                    <p>Moon sign that will be under Sade-Sati (Saturn's 7.5-year phase) will be Sagittarius sign, Capricorn sign, and Aquarius sign while dhaiya (2.5) years will be on Gemini sign and Libra sign. The native of Capricorn will enter their second phase as well as be in the final phase of Sade-Sati for the native of Sagittarius. The Saturn movement's next change will take place in April 29, 2022.</p>
+                    <p>The year 2020 can have a bigger impact on the world where the crisis can emerge in the Middle East and things can get worse. It can be likely to increase in tensions. This could also be a year of one of the major earthquakes that can be remembered for years. It can also have an impact on global growth, and this year there are high chances of heading into recession.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-3 padding-10" style="padding-top: 20px;">
+            <div class="col-12">
+                <a href="/freehoroscope/Libra">
+                    <div class="sign-tile">
+                        <div class="icon bg-libra">
+                            <img src="../static/images/libra.png" alt="libra">
+                        </div>
+                        <p>Libra</p>
+                        <p>Sep 23 - Oct 22</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12">
+                <a href="/freehoroscope/Scorprio">
+                    <div class="sign-tile">
+                        <div class="icon bg-scorpio">
+                            <img src="../static/images/scorpio.png" alt="scorpio">
+                        </div>
+                        <p>Scorpio</p>
+                        <p>Oct 23 - Nov 21</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12">
+                <a href="/freehoroscope/Sagittarius">
+                    <div class="sign-tile">
+                        <div class="icon bg-sagittarius">
+                            <img src="../static/images/sagittarius.png" alt="sagittarius">
+                        </div>
+                        <p>Sagittarius</p>
+                        <p>Nov 22 - Dec 21</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12">
+                <a href="/freehoroscope/Capricorn">
+                    <div class="sign-tile">
+                        <div class="icon bg-capricorn">
+                            <img src="../static/images/capricorn.png" alt="capricorn">
+                        </div>
+                        <p>Capricorn</p>
+                        <p>Dec 22 - Jan 19</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12">
+                <a href="/freehoroscope/Aquarius">
+                    <div class="sign-tile">
+                        <div class="icon bg-aquarius">
+                            <img src="../static/images/aquarius.png" alt="aquarius">
+                        </div>
+                        <p>Aquarius</p>
+                        <p>Jan 20 - Feb 18 </p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12">
+                <a href="/freehoroscope/Pisces">
+                    <div class="sign-tile">
+                        <div class="icon bg-pisces">
+                            <img src="../static/images/pisces.png" alt="pisces">
+                        </div>
+                        <p>Pisces</p>
+                        <p>Feb 19 - Mar 20</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<hr width="90%" size="2px" color="#999">
+<div class="card-footer noborder bg-dark text-white padding10 text-center smallertext">Copyright &COPY; 2020 Apurva Jaiswal Software Aid Pvt. Ltd. All Rights Reserved</div>
+{% endblock %}

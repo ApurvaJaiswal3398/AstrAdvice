@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AstrAdvice</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    {% block css %}{% endblock %}
+    {% block js %}{% endblock %}
+    <style>
+        .margin5{
+            margin: 2px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" style="padding-left: 50px;">
+        <a class="navbar-brand page-scroll collapsed  ml-auto" href="/">
+            <img src="../static/images/logo.png" class="margin5" width="35px" alt="Astrology Prediction" title="AstrAdvice Logo">
+        </a>
+        <a class="navbar-brand" href="/">AstrAdvice</a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+        aria-expanded="false" aria-label="Toggle navigation"></button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="/talk-to-astrologer">Talk to Astrologer</a>
+                </li>
+                {% if logged_in %}
+                <li class="nav-item">
+                    <a class="nav-link" href="/annual-horoscope">Horoscope 2020</a>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="/login" onclick="alert('Login to Access This Feature');">Horoscope 2020</a>
+                </li>
+                {% endif %}
+                <li class="nav-item">
+                    <a class="nav-link" href="tel:+919856985698"><img src="../static/images/feather/phone.svg" width="20px" alt="Call Us"> <u>+91 - 9856985698</u></a>
+                </li>
+                {% if logged_in %}
+                <li class="nav-item badge badge-pill border btn-outline-info">
+                    <a class="nav-link" href="/logout">Log Out</a>
+                </li>
+                {% else %}
+                <li class="nav-item badge badge-pill border btn-outline-info">
+                    <a class="nav-link" href="/login">Login</a>
+                </li>&nbsp; &nbsp;
+                <li class="nav-item badge badge-pill border btn-outline-info">
+                    <a class="nav-link" href="/register">Register</a>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+    </nav>
+    <br><br><br>
+    {% block body %}{% endblock %}
+</body>
+</html>
